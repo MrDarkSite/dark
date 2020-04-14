@@ -31,7 +31,7 @@ $(function () {
 
         $(document).ready(function () {
                 $("body").on("click", "#arrow", function () {
-                    $(this).prev("#header_left").slideToggle(300);
+                    $(this).next().slideToggle(300);
                 });
             });
 
