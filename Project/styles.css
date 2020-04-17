@@ -1,7 +1,7 @@
 html, body {
 	margin: 0;
 	padding: 0;
-	/*min-width: 1000px;*/
+	/*min-width: 320px;*/
 	font-family: Arial;
 }
 
@@ -38,6 +38,11 @@ img {
 	position: relative;
 }
 
+#flex-container {
+	display: flex;
+	align-items: flex-start;
+}
+
 #datetime {
 	float: right;
 }
@@ -56,9 +61,10 @@ img {
 }
 
 #column-left {
+	flex-basis: auto;
 	background-color: #FFFFFF;
 	width: 250px;
-	float: left;
+	/*float: left;*/
 }
 
 	.news-item {
@@ -99,14 +105,16 @@ img {
 		}
 
 #column-center {
-	background-color: green;
+	margin: 0 20px;
+	/*background-color: green;*/
 	width: 420px;
 	margin-left: 20px;
-	float: left;
+	/*float: left;*/
 }
 
 #central-container {
-	padding-top: 20px;
+
+	/*padding-top: 20px;*/
 	background-color: #f9f9f9;
 	background-image: url('img/central-bg-top.png');
 	background-repeat: repeat-x;
@@ -114,6 +122,24 @@ img {
 
 #central-container .fixed-container {
 	overflow-y: hidden;
+}
+
+.news-flex {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flex-cont:nth-child(2n) {
+	margin-right: 0;
+}
+.flex-cont{
+	margin-right: 20px;
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.flex-cont img{
+	max-width: 200px;
 }
 
 #column-right {
@@ -135,7 +161,4 @@ img {
 
 .list-item {
 	display: list-item;
-}
-
-@media screen and (min-width:500px) and (max-width:1024px) {
 }
